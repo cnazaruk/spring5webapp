@@ -10,8 +10,7 @@ public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String firstName;
-    private String lastName;
+    private String name;
     private String addressLine1;
     private String city;
     private String state;
@@ -24,29 +23,20 @@ public class Publisher {
     public Publisher() {
     }
 
-    public Publisher(String firstName, String lastName, String addressLine1, String city, String state, String zip) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Publisher(String name, String addressLine1, String city, String state, String zip) {
+        this.name = name;
         this.addressLine1 = addressLine1;
         this.city = city;
         this.state = state;
         this.zip = zip;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddressLine1() {
@@ -93,8 +83,7 @@ public class Publisher {
     public String toString() {
         return "Publisher{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", name='" + name + '\'' +
                 ", addressLine1='" + addressLine1 + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
